@@ -15,8 +15,9 @@ public class DES {
     }
 
 
-    public static void encryption(){
+    public static String encryption(String message, String qelsi){
 
+        return null;
     }
 
     public static void decryption(){
