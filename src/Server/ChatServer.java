@@ -82,11 +82,11 @@ public class ChatServer {
         return this.userNames;
     }
 
-//    /**
-//     * Kthen true nese ka perdorues tjere te lidhur
-//     */
-//    boolean hasUsers() {
-//        return !this.userNames.isEmpty();
-//    }
+    /**
+     * Kthen true nese ka perdorues tjere te lidhur
+     */
+    boolean hasUsers() {
+        return !this.userNames.isEmpty();
+    }
 
 }
