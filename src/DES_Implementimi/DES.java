@@ -20,6 +20,8 @@ public class DES {
         return null;
     }
 
-    public static void decryption(){
+    public static String decryption(String message, String qelsi){
+
+        return null;
     }
 }
