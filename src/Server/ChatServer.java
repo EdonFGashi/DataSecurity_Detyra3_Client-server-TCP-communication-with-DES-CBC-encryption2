@@ -48,4 +48,17 @@ public class ChatServer {
         }
     }
 
+    /**
+     * Dergo mesazh nga njeri tek gjith te tjeret (broadcasting)
+     */
+    void broadcast(String message, UserThread excludeUser) {
+        for (UserThread aUser : userThreads) {
+            if (aUser != excludeUser) {
+                aUser.sendMessage(message);
+            }
+        }
+        System.out.println(message);
+    }
+
+
 }
