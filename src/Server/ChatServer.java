@@ -60,5 +60,33 @@ public class ChatServer {
         System.out.println(message);
     }
 
+    /**
+     * E ruan emrin e perdoruesit te ri te kyqur
+     */
+    void addUserName(String userName) {
+        userNames.add(userName);
+    }
+
+    /**
+     * Kur nje klient largohet i fshihet emri dhe objekti i tij nga lista e usereve
+     */
+    void removeUser(String userName, UserThread aUser) {
+        boolean removed = userNames.remove(userName);
+        if (removed) {
+            userThreads.remove(aUser);
+            System.out.println("Perdoruesi " + userName + " u largua");
+        }
+    }
+
+    Set<String> getUserNames() {
+        return this.userNames;
+    }
+
+//    /**
+//     * Kthen true nese ka perdorues tjere te lidhur
+//     */
+//    boolean hasUsers() {
+//        return !this.userNames.isEmpty();
+//    }
 
 }
