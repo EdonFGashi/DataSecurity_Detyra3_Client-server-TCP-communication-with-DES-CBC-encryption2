@@ -32,6 +32,8 @@ public class UserThread extends Thread{
             String serverMessage = "Nje perdorues i ri u kyq:" + userName;
             server.broadcast(serverMessage, this);
 
+            printUsers();
+
             String clientMessage;
 
             do {
@@ -55,6 +57,16 @@ public class UserThread extends Thread{
         }
     }
 
+    /**
+     * Dergon nje liste te perdoruesve te kyqur tek perdoruesi qe sapo u kyq
+     */
+    void printUsers() {
+        if (server.hasUsers()) {
+            writer.println("Perdoruesit e kyqur: " + server.getUserNames());
+        } else {
+            writer.println("Nuk ka perdorues te kyqur");
+        }
+    }
 
     /**
      * Dergon mesazh tek klientiy
