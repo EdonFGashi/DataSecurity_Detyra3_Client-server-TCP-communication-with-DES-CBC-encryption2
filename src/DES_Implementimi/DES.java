@@ -74,4 +74,8 @@ public class DES {
             return null;
         }
     }
+    private static byte[] removePadding(byte[] data) {
+        int padLength = data[data.length - 1];
+        return Arrays.copyOfRange(data, 0, data.length - padLength);
+    }
 }
