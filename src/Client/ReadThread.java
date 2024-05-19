@@ -37,7 +37,7 @@ public class ReadThread {
                 } else {
                     String parts[] = response.split(":");
                     String mesazhi = (parts[1]);
-                    String tekstiDekriptuar = DES.decryption(mesazhi, "Blera1234");
+                    String tekstiDekriptuar = DES.decryption(mesazhi, "FieK32*=1");
                     System.out.println("\n" + parts[0] + ":" + tekstiDekriptuar);
                 }
 

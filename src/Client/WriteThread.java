@@ -1,5 +1,7 @@
 package Client;
 
+import DES_Implementimi.DES;
+
 import java.io.Console;
 import java.io.IOException;
 import java.io.OutputStream;
@@ -43,7 +45,7 @@ public class WriteThread extends Thread{
         do {
             text = console.readLine();
 
-            String tekstiEnktipruar = DES.encryption(text, "Blera1234");
+            String tekstiEnktipruar = DES.encryption(text, "FieK32*=1");
             writer.println(tekstiEnktipruar);
 
         } while (!text.equals("dil"));
