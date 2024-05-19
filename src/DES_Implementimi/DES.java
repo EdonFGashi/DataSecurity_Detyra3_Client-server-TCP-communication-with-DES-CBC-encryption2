@@ -52,6 +52,10 @@ public class DES {
             DESKeySpec desKeySpec = new DESKeySpec(key.getBytes());
             SecretKeyFactory keyFactory = SecretKeyFactory.getInstance("DES");
             SecretKey secretKey = keyFactory.generateSecret(desKeySpec);
+
+
+            byte[] ivBytes = { 0x00, 0x01, 0x02, 0x03, 0x04, 0x05, 0x06, 0x07 };
+            IvParameterSpec ivSpec = new IvParameterSpec(ivBytes);
             return null;
         } catch (Exception ex) {
             ex.printStackTrace();
