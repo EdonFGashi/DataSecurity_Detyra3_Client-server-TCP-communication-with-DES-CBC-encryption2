@@ -45,9 +45,17 @@ public class DES {
     }
 
     public static String decryption(String message, String qelsi) {
-        String encryptedBase64 = message;
-        String key = qelsi;
+        try {
+            String encryptedBase64 = message;
+            String key = qelsi;
 
-        return null;
+            DESKeySpec desKeySpec = new DESKeySpec(key.getBytes());
+            SecretKeyFactory keyFactory = SecretKeyFactory.getInstance("DES");
+            SecretKey secretKey = keyFactory.generateSecret(desKeySpec);
+            return null;
+        } catch (Exception ex) {
+            ex.printStackTrace();
+            return null;
+        }
     }
 }
