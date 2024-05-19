@@ -2,13 +2,16 @@ package Client;
 
 import DES_Implementimi.DES;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.net.Socket;
+import java.io.*;
+import java.net.*;
 
-public class ReadThread {
+/*
+ * Ky thread ka per detyre qe te lexoj sinjalin nga serveri dhe e
+ * shfaq ate ne server
+ * Ekzekutohet vazhdimisht deri sa klienti te dekonektohet nga serveri
+ */
+
+public class ReadThread extends Thread {
     private BufferedReader reader;
     private Socket socket;
     private ChatClient client;
@@ -25,6 +28,7 @@ public class ReadThread {
             ex.printStackTrace();
         }
     }
+
     public void run() {
         int i = 1;
         while (true) {

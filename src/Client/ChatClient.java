@@ -1,8 +1,12 @@
 package Client;
 
-import java.io.IOException;
-import java.net.Socket;
-import java.net.UnknownHostException;
+import java.net.*;
+import java.io.*;
+
+/*
+ * Programi i bisedes se klientit
+ * Shkruani 'dil' per te dale nga biseda
+ */
 
 public class ChatClient {
     private String hostname;
