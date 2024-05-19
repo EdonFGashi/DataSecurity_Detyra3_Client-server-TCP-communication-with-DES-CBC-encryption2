@@ -64,7 +64,10 @@ public class DES {
             byte[] encryptedBytes = Base64.getDecoder().decode(encryptedBase64);
 
             byte[] decryptedBytes = cipher.doFinal(encryptedBytes);
-            return null;
+
+            String decryptedText = new String(decryptedBytes);
+
+            return decryptedText;
         }
         catch (Exception ex) {
             ex.printStackTrace();
