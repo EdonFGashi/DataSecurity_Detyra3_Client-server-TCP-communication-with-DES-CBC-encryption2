@@ -61,6 +61,8 @@ public class DES {
             Cipher cipher = Cipher.getInstance("DES/CBC/PKCS5Padding");
             cipher.init(Cipher.DECRYPT_MODE, secretKey, ivSpec);
 
+            byte[] encryptedBytes = Base64.getDecoder().decode(encryptedBase64);
+
             return null;
         }
         catch (Exception ex) {
