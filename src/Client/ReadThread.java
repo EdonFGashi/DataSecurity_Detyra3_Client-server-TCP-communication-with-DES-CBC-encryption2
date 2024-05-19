@@ -1,6 +1,5 @@
 package Client;
 
-import DES_Implementimi.DES;
 
 import java.io.*;
 import java.net.*;

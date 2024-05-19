@@ -1,4 +1,4 @@
-package DES_Implementimi;
+package Client;
 
 import javax.crypto.Cipher;
 import javax.crypto.SecretKey;
