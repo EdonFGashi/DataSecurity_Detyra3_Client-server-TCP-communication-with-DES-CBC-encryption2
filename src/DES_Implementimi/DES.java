@@ -44,7 +44,9 @@ public class DES {
         }
     }
 
-    public static String decryption(String message, String qelsi){
+    public static String decryption(String message, String qelsi) {
+        String encryptedBase64 = message;
+        String key = qelsi;
 
         return null;
     }
