@@ -54,10 +54,22 @@ public class DES {
             SecretKey secretKey = keyFactory.generateSecret(desKeySpec);
 
 
-            byte[] ivBytes = { 0x00, 0x01, 0x02, 0x03, 0x04, 0x05, 0x06, 0x07 };
+            byte[] ivBytes = {0x00, 0x01, 0x02, 0x03, 0x04, 0x05, 0x06, 0x07};
             IvParameterSpec ivSpec = new IvParameterSpec(ivBytes);
-            return null;
-        } catch (Exception ex) {
+
+
+            Cipher cipher = Cipher.getInstance("DES/CBC/PKCS5Padding");
+            cipher.init(Cipher.DECRYPT_MODE, secretKey, ivSpec);
+
+            byte[] encryptedBytes = Base64.getDecoder().decode(encryptedBase64);
+
+            byte[] decryptedBytes = cipher.doFinal(encryptedBytes);
+
+            String decryptedText = new String(decryptedBytes);
+
+            return decryptedText;
+        }
+        catch (Exception ex) {
             ex.printStackTrace();
             return null;
         }
